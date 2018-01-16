@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-wd = webdriver.Firefox()
+wd = webdriver.Chrome()
 
 
 def registration():

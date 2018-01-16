@@ -5,15 +5,17 @@
 version: 2
 jobs:
   build:
-
+    working_directory: ~/repo
+    docker:
+      - image: circleci/python:3.6.2-browsers
+    steps:
+         # run tests!
       - run:
           name: install dependencies
-          command: |
-            pip install -r requirements.txt
-
-      # run tests!
+          command: pip install -r requirements.txt
       - run:
-          name: run script
-          command: |
-            python onboarding_revet.py
+          name: run tests
+          command: python onboarding_revet.py test
+
+
 
