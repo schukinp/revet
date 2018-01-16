@@ -1,20 +1,14 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/python:3.6.2-browsers
-    steps:
-         # run tests!
-      - run:
-          name: install dependencies
-          command: pip install -r requirements.txt
-      - run:
-          name: run tests
-          command: python onboarding_revet.py test
 
+machine:
+ python:
+  version: 3.5.2
+
+dependencies:
+ override:
+  - pip install -r -requirements.txt
+
+test:
+ override:
+  - python onboarding_revet.py
 
 
