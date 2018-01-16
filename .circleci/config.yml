@@ -11,17 +11,8 @@ jobs:
           command: |
             pip install -r requirements.txt
 
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-
       # run tests!
       - run:
           name: run script
           command: |
             python onboarding_revet.py
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
