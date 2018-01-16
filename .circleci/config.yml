@@ -16,3 +16,10 @@ jobs:
           name: run script
           command: |
             python onboarding_revet.py
+<<<<<<< HEAD
+=======
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+>>>>>>> 009cc25d4be65b118644e039f3ad2b2c5d8362e6
