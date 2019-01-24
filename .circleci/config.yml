@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        command: pip3 install -r requirements.txt
-      - run:
-        command: python onboarding_revert.py
+          command: 
+            pip3 install -r requirements.txt
+            python onboarding_revert.py
 
       
