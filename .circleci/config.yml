@@ -1,14 +1,10 @@
+jobs:
+  build:
+    docker:
+      - image: younk/python-chromedriver
+    steps:
+      - run:
+          pip3 install -r requirements.txt
+          python onboarding_revert.py
 
-machine:
- python:
-  version: 3.5.2
-
-dependencies:
- override:
-  - pip install -r -requirements.txt
-
-test:
- override:
-  - python onboarding_revet.py
-
-
+      
