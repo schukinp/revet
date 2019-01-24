@@ -1,10 +1,11 @@
-build:
-  docker:
-    - image: younk/python-chromedriver
-  steps:
-    - run:
+jobs:
+  build:
+    docker:
+      - image: younk/python-chromedriver
+    steps:
+      - run:
         command: pip3 install -r requirements.txt
-    - run:
+      - run:
         command: python onboarding_revert.py
 
       
