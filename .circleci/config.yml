@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           command: |
-            pip3 install -r requirements.txt
+            pip install -r requirements.txt
             python onboarding_revert.py
 
       
